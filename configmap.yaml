@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfig
+data:
+  word1: "Hello"
+  word2: "World"
+  word3: "Kubernetes"
+  word4: "Nginx"
+  word5: "Docker"
+  server-fqdn: "your-domain.com" # Replace with the actual domain

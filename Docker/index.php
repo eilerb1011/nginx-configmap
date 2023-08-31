@@ -3,7 +3,7 @@
 <head>
   <style>
     body {
-      background-color: #CCCCFF;
+      background-color: <?php echo $_SERVER['background']; ?>;
       display: flex;
       flex-direction: column;
       height: 100vh;
@@ -14,7 +14,7 @@
       width: 100%;
       height: 10vh;
       text-align: center;
-      background-color: #D1B48C;
+      background-color: <?php echo $_SERVER['bannercolor']; ?>;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -32,7 +32,7 @@
       width: 20%;
       height: 15vh;
       text-align: center;
-      background-color: #D1B48C;
+      background-color: <?php echo $_SERVER['boxcolor']; ?>;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -43,7 +43,7 @@
   </style>
 </head>
 <body>
-  <div class="banner">Words of the Day</div>
+  <div class="banner"><?php echo $_SERVER['banner']; ?></div>
   <div class="box-container">
     <div class="box"><?php echo $_SERVER['word1']; ?></div>
     <div class="box"><?php echo $_SERVER['word2']; ?></div>

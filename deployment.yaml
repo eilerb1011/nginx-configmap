@@ -1,39 +1,78 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: nginx-web
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: my-app
+      app: nginx-web
   template:
     metadata:
       labels:
-        app: my-app
+        app: nginx-web
     spec:
       containers:
-        - name: my-container
-          image: your-nginx-image:tag
+        - name: nginx-web
+          image: eilerb101/nginx-configmap:latest
           ports:
             - containerPort: 80
           envFrom:
             - configMapRef:
                 name: myconfig
           env:
-            - name: WORD1
+            - name: word1
               valueFrom:
                 configMapKeyRef:
                   name: myconfig
                   key: word1
-            # Repeat for WORD2, WORD3, WORD4, and WORD5
-            - name: SERVER_FQDN
+            - name: word2
               valueFrom:
                 configMapKeyRef:
                   name: myconfig
-                  key: server-fqdn
-      volumes:
-        - name: certs-volume
-          secret:
-            secretName: sitecert
-            defaultMode: 420
+                  key: word2
+            - name: word3
+              valueFrom:
+                configMapKeyRef:
+                  name: myconfig
+                  key: word3
+            - name: word4
+              valueFrom:
+                configMapKeyRef:
+                  name: myconfig
+                  key: word4
+            - name: word5
+              valueFrom:
+                configMapKeyRef:
+                  name: myconfig
+                  key: word5
+            - name: banner
+              valueFrom:
+                configMapKeyRef:
+                  name: myconfig
+                  key: banner
+            - name: boxcolor
+              valueFrom:
+                configMapKeyRef:
+                  name: myconfig
+                  key: boxcolor
+            - name: bannercolor
+              valueFrom:
+                configMapKeyRef:
+                  name: myconfig
+                  key: bannercolor
+            - name: background
+              valueFrom:
+                configMapKeyRef:
+                  name: myconfig
+                  key: background
+            - name: user
+              valueFrom:
+                secretKeyRef:
+                  name: sitepass
+                  key: user
+            - name: htpass
+              valueFrom:
+                secretKeyRef:
+                  name: sitepass
+                  key: htpass

@@ -45,11 +45,11 @@
 <body>
   <div class="banner">Words of the Day</div>
   <div class="box-container">
-    <div class="box"><?php echo $_ENV['WORD1']; ?></div>
-    <div class="box"><?php echo $_ENV['WORD2']; ?></div>
-    <div class="box"><?php echo $_ENV['WORD3']; ?></div>
-    <div class="box"><?php echo $_ENV['WORD4']; ?></div>
-    <div class="box"><?php echo $_ENV['WORD5']; ?></div>
+    <div class="box"><?php echo $_SERVER['word1']; ?></div>
+    <div class="box"><?php echo $_SERVER['word2']; ?></div>
+    <div class="box"><?php echo $_SERVER['word3']; ?></div>
+    <div class="box"><?php echo $_SERVER['word4']; ?></div>
+    <div class="box"><?php echo $_SERVER['word5']; ?></div>
   </div>
 </body>
 </html>

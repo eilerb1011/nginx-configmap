@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfig
+data:
+  banner: "Production Schedule"
+  background: Cornsilk
+  bannercolor: BurlyWood
+  boxcolor: Chocolate
+  word1: "Line 1: Widget A<br>Line 2: Widget B"
+  word2: "Line 1: Widget A<br>Line 2: Widget B"
+  word3: "Line 1: Widget B<br>Line 2: Widget A"
+  word4: "Line 1: Widget B<br>Line 2: Widget A"
+  word5: "Closed for<br>the Holiday"

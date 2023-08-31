@@ -3,9 +3,12 @@ kind: ConfigMap
 metadata:
   name: myconfig
 data:
-  word1: "Hello"
-  word2: "World"
-  word3: "Kubernetes"
-  word4: "Nginx"
-  word5: "Docker"
-  server-fqdn: "your-domain.com" # Replace with the actual domain
+  banner: "Weekly Menu"
+  background: DarkSlateBlue
+  bannercolor: DimGray
+  boxcolor: DarkOliveGreen
+  word1: "Lasagna<br>Salad<br>Tiramisu"
+  word2: "Cheeseburger<br>Fries"
+  word3: "Pizza<br>Garlic Bread"
+  word4: "BBQ Pork<br>Cornbread"
+  word5: "Chicken Sandwich<br>Fresh Fruit"
